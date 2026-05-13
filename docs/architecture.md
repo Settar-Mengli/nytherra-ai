@@ -32,9 +32,19 @@ The model provider is configured through a LiteLLM-compatible route using the 4G
 
 ### Model Route
 
-Working model route:
+OpenClaw uses the LiteLLM-prefixed route internally:
 
+```text
 litellm/downtown-miami/groq/llama-3.1-8b-instant
+```
+
+The sanitized config example uses the underlying 4Geeks/Groq provider model id:
+
+```text
+downtown-miami/groq/llama-3.1-8b-instant
+```
+
+Both forms may appear in this repository because they refer to the same provider route from different configuration layers.
 
 The model is configured for text input with reasoning disabled because the selected Groq/Llama route does not support reasoning-specific request parameters.
 

@@ -1,14 +1,24 @@
 # Secrets and live runtime files
 .env
 *.env
+.env.*
 *.key
 *.pem
 *.token
 *.secret
 credentials/
 secrets/
+.ssh/
+id_rsa
+id_ed25519
+*.p12
+*.pfx
 .openclaw/
+/openclaw*.json
+/agent.models.json
 nytherra-ai-checkpoints/
+checkpoints/
+sessions/
 
 # Local/system files
 .DS_Store
@@ -16,8 +26,13 @@ Thumbs.db
 
 # Logs and temporary files
 *.log
+logs/
 tmp/
 temp/
+*.bak
+*.backup
+*.db
+*.sqlite*
 
 # Node/build artifacts
 node_modules/

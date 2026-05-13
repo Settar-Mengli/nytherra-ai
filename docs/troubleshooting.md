@@ -18,7 +18,11 @@ OpenClaw initially selected a default LiteLLM model route that was not available
 
 The model route was updated to the available 4Geeks/Groq route:
 
+```text
 litellm/downtown-miami/groq/llama-3.1-8b-instant
+```
+
+OpenClaw uses this LiteLLM-prefixed route internally. The sanitized config example uses the underlying provider model id, `downtown-miami/groq/llama-3.1-8b-instant`, because that value is passed within the 4Geeks/Groq provider configuration.
 
 ## Provider Schema Rejection
 
@@ -62,7 +66,9 @@ The agent-specific model configuration file was missing.
 
 The agent model file was recreated at:
 
+```text
 ~/.openclaw/agents/main/agent.models.json
+```
 
 and configured with reasoning disabled for the active model route.
 
