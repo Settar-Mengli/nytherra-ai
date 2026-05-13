@@ -43,8 +43,7 @@ Screenshots should be reviewed before being added to the repository. Any visible
 
 Before final portfolio submission:
 
-- Regenerate the OpenClaw gateway token.
-- Rotate any exposed or reused credentials.
+- Confirm live credentials remain private and excluded from Git.
 - Review screenshots for secrets.
 - Confirm .gitignore is active.
 - Confirm no live config files are staged in Git.

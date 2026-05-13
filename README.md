@@ -17,7 +17,7 @@ Core deployment is working.
 - Working configuration checkpoint created
 - Telegram Bot API private channel integration tested through OpenClaw polling
 
-Validation evidence is documented privately for now. Sanitized screenshots may be added later after they are reviewed for secrets, host details, and private terminal history.
+Only sanitized evidence is included in this repository; live validation details remain private.
 
 ## Project Evidence
 
@@ -26,6 +26,9 @@ Validation evidence is documented privately for now. Sanitized screenshots may b
 
 ![Nytherra responding through the LiteLLM-prefixed 4Geeks/Groq model route.](screenshots/nytherra-agent-model-route.png)
 *Nytherra responding through the LiteLLM-prefixed 4Geeks/Groq model route.*
+
+![Nytherra responding through the tested private Telegram channel.](screenshots/nytherra-telegram-private-channel-response.png)
+*Nytherra responding through the tested private Telegram channel.*
 
 ## Architecture
 

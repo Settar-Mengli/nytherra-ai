@@ -14,5 +14,5 @@ Please do not include live secrets, full tokens, private IP addresses, SSH host 
 
 - The OpenClaw gateway is documented as loopback-only.
 - Public configuration is sanitized and example-only.
-- Telegram integration is not part of the current stable baseline.
-- Screenshots should be added only after manual review and redaction.
+- Telegram is documented as a tested private channel integration protected through OpenClaw pairing and owner approval.
+- Future or additional screenshots should be added only after manual review and redaction.

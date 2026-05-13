@@ -77,6 +77,6 @@ The current deployment prioritizes a secure baseline:
 ## Future Enhancements
 
 - Continue hardening private channel permissions before enabling privileged commands
-- Add sanitized screenshots
+- Add additional sanitized evidence if useful
 - Explore stronger model routes through LiteLLM/OpenRouter
 - Add deployment hardening notes
