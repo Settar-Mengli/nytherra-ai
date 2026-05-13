@@ -1,0 +1,25 @@
+# Secrets and live runtime files
+.env
+*.env
+*.key
+*.pem
+*.token
+*.secret
+credentials/
+secrets/
+.openclaw/
+nytherra-ai-checkpoints/
+
+# Local/system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Node/build artifacts
+node_modules/
+dist/
+build/
