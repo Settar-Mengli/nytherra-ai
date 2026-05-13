@@ -18,6 +18,14 @@ Core deployment is working.
 
 Validation evidence is documented privately for now. Sanitized screenshots may be added later after they are reviewed for secrets, host details, and private terminal history.
 
+## Project Evidence
+
+![OpenClaw installed successfully on the Linux VPS runtime baseline.](screenshots/nytherra-openclaw-install-success.png)
+*OpenClaw installed successfully on the Linux VPS runtime baseline.*
+
+![Nytherra responding through the LiteLLM-prefixed 4Geeks/Groq model route.](screenshots/nytherra-agent-model-route.png)
+*Nytherra responding through the LiteLLM-prefixed 4Geeks/Groq model route.*
+
 ## Architecture
 
 Local machine -> SSH -> Linux VPS -> OpenClaw runtime -> Local gateway -> 4Geeks LLM gateway -> Groq/Llama model
@@ -49,6 +57,6 @@ Secrets, API keys, gateway tokens, and live configuration files are excluded fro
 
 ## Next Steps
 
-- Add safe screenshots
+- Add additional sanitized screenshots if useful
 - Add deployment hardening notes
 - Optionally add Telegram or external channel integration later

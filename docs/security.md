@@ -27,6 +27,9 @@ The following should never be committed to GitHub:
 
 Screenshots should be reviewed before being added to the repository. Any visible token, API key, host credential, or private terminal history should be blurred, cropped, or replaced with a clean screenshot.
 
+![Repository hardening for runtime files, credentials, checkpoints, and local OpenClaw artifacts.](../screenshots/nytherra-security-gitignore-hardening.png)
+*Repository hardening for runtime files, credentials, checkpoints, and local OpenClaw artifacts.*
+
 ## Pre-Submission Security Checklist
 
 Before final portfolio submission:
