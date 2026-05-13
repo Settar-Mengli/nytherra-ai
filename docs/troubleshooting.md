@@ -72,6 +72,29 @@ The agent model file was recreated at:
 
 and configured with reasoning disabled for the active model route.
 
+## Telegram Polling Test
+
+### Symptom
+
+Telegram needed to be verified as a private channel integration without publishing private setup details.
+
+### Resolution
+
+OpenClaw channel status confirmed Telegram was enabled, configured, running, connected, polling, and working.
+
+Sanitized prompt test:
+
+```text
+Prompt: Plain text test. Say ONLINE.
+Result: ONLINE
+```
+
+Telegram access is protected through OpenClaw pairing and owner approval rather than open public DM access.
+
+## Current Model/Tool-Routing Limitation
+
+The lightweight Llama 3.1 8B route may occasionally need explicit identity/context prompts and may over-route or overuse internal message/session behavior on strict prompts. This is a model/tool-routing limitation, not a Telegram integration failure.
+
 ## Final Working State
 
 The final working deployment uses:
@@ -81,5 +104,6 @@ The final working deployment uses:
 - Token-based gateway authentication
 - 4Geeks LLM gateway
 - Groq Llama 3.1 8B Instant model route
+- Telegram Bot API private channel integration through OpenClaw polling
 - Text-only input
 - Reasoning-specific parameters disabled for provider compatibility

@@ -7,6 +7,7 @@ Nytherra AI is configured with a security-first baseline for the initial deploym
 - The OpenClaw gateway is bound to loopback.
 - The gateway is not exposed directly to the public internet.
 - Token-based gateway authentication is enabled.
+- Telegram access is protected through OpenClaw pairing and owner approval.
 - Live runtime configuration files are excluded from the GitHub project.
 - API keys, gateway tokens, and credentials are not committed.
 - Public documentation uses sanitized configuration examples only.
@@ -22,6 +23,14 @@ The following should never be committed to GitHub:
 - Live OpenClaw configuration files
 - Checkpoint backups
 - Screenshots that reveal secrets
+
+## Telegram Channel Security
+
+Telegram Bot API integration has been tested as a private OpenClaw channel using polling.
+
+The channel is protected through OpenClaw pairing and owner approval rather than open public DM access. It should be described as a tested private channel integration, not as a public production bot.
+
+Privileged commands should remain disabled unless owner permissions, allowlists, and command boundaries are explicitly configured and reviewed.
 
 ## Screenshot Policy
 
@@ -45,8 +54,8 @@ Before final portfolio submission:
 
 Possible future hardening steps include:
 
-- Configure a command owner before enabling external channels.
-- Add Telegram only after owner permissions are configured.
+- Keep Telegram limited to owner-approved private channel access.
+- Configure command permissions before enabling privileged actions.
 - Use least-privilege access for channels and tools.
 - Avoid public gateway exposure unless secured behind an authenticated proxy.
 - Keep model and provider credentials separate from the repository.

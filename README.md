@@ -15,6 +15,7 @@ Core deployment is working.
 - Groq Llama 3.1 8B Instant model responding successfully
 - Health check completed with no plugin errors
 - Working configuration checkpoint created
+- Telegram Bot API private channel integration tested through OpenClaw polling
 
 Validation evidence is documented privately for now. Sanitized screenshots may be added later after they are reviewed for secrets, host details, and private terminal history.
 
@@ -29,6 +30,8 @@ Validation evidence is documented privately for now. Sanitized screenshots may b
 ## Architecture
 
 Local machine -> SSH -> Linux VPS -> OpenClaw runtime -> Local gateway -> 4Geeks LLM gateway -> Groq/Llama model
+
+Telegram private chat -> Telegram Bot API -> OpenClaw Telegram channel polling -> OpenClaw runtime -> Local gateway -> 4Geeks/Groq model route
 
 OpenClaw uses the LiteLLM-prefixed route internally:
 
@@ -48,6 +51,8 @@ Both forms are expected because they refer to the same provider route from diffe
 
 Secrets, API keys, gateway tokens, and live configuration files are excluded from this repository. Public examples are sanitized and should not be used as live deployment files without replacing placeholders in a private environment.
 
+Telegram access is protected through OpenClaw pairing and owner approval rather than open public DM access. The integration is documented as a tested private channel, not a public production bot.
+
 ## Documentation
 
 - [Architecture](docs/architecture.md)
@@ -59,4 +64,4 @@ Secrets, API keys, gateway tokens, and live configuration files are excluded fro
 
 - Add additional sanitized screenshots if useful
 - Add deployment hardening notes
-- Optionally add Telegram or external channel integration later
+- Document any additional private channel hardening as the project evolves

@@ -6,6 +6,8 @@ Nytherra AI is a self-hosted AI assistant deployed on a Linux VPS using OpenClaw
 
 User terminal -> SSH connection -> Linux VPS -> OpenClaw runtime -> Local OpenClaw gateway -> 4Geeks LLM gateway -> Groq/Llama model
 
+Telegram private chat -> Telegram Bot API -> OpenClaw Telegram channel polling -> OpenClaw runtime -> Local gateway -> 4Geeks/Groq model route
+
 ## Core Components
 
 ### Linux VPS
@@ -25,6 +27,12 @@ The gateway is bound to loopback for safety.
 - Exposure: local only
 
 This avoids exposing the gateway directly to the public internet during the initial deployment phase.
+
+### Telegram Private Channel
+
+Telegram Bot API integration has been configured and tested as a private OpenClaw channel using polling.
+
+Access is protected through OpenClaw pairing and owner approval rather than open public DM access. The channel is documented as a tested private integration, not a public production bot.
 
 ### LiteLLM-Compatible Provider Route
 
@@ -54,6 +62,7 @@ The current deployment prioritizes a secure baseline:
 
 - Gateway bound to loopback
 - Token-based gateway authentication
+- Telegram private channel protected by pairing and owner approval
 - No public gateway exposure
 - No secrets committed to the project repository
 - Live runtime configs excluded from GitHub
@@ -61,15 +70,13 @@ The current deployment prioritizes a secure baseline:
 
 ## Current Limitations
 
-- No Telegram or external channel integration yet
 - No public web gateway exposure
 - Model route uses a lightweight Llama 3.1 8B model
-- Strict instruction following may vary due to model size
+- The lightweight Llama 3.1 8B route may occasionally need explicit identity/context prompts and may over-route or overuse internal message/session behavior on strict prompts. This is a model/tool-routing limitation, not a Telegram integration failure.
 
 ## Future Enhancements
 
-- Add Telegram channel integration
-- Configure command owner for privileged actions
+- Continue hardening private channel permissions before enabling privileged commands
 - Add sanitized screenshots
 - Explore stronger model routes through LiteLLM/OpenRouter
 - Add deployment hardening notes
