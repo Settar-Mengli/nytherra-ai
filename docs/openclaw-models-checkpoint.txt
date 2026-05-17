@@ -1,0 +1,21 @@
+# OpenClaw Model Routing Checkpoint
+
+Purpose: preserve the verified model configuration state without committing live OpenClaw runtime paths, credential store details, provider tokens, or account identifiers.
+
+## Verified Routing
+
+- Primary model: DeepSeek V3.2 through the OpenRouter-compatible route.
+- Fallback model: Groq Llama 3.1 8B Instant.
+- A compatibility alias maps the older LiteLLM alias to the Llama fallback route.
+- Reasoning-specific parameters remain disabled for the Llama fallback because that route does not support them.
+
+## Sanitized Route Examples
+
+```text
+litellm/downtown-miami/openrouter/deepseek/deepseek-v3.2
+litellm/downtown-miami/groq/llama-3.1-8b-instant
+```
+
+## Redaction Notes
+
+The live credential store, OpenClaw runtime path, auth profile location, and provider credential values are intentionally omitted from this checkpoint.

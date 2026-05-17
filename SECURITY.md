@@ -15,4 +15,6 @@ Please do not include live secrets, full tokens, private IP addresses, SSH host 
 - The OpenClaw gateway is documented as loopback-only.
 - Public configuration is sanitized and example-only.
 - Telegram is documented as a tested private channel integration protected through OpenClaw pairing and owner approval.
+- Gmail automation is documented as draft-only.
+- Google Docs, Drive, and Calendar evidence should avoid raw resource URLs and IDs.
 - Future or additional screenshots should be added only after manual review and redaction.

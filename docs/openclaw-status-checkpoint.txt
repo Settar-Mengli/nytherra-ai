@@ -1,0 +1,23 @@
+# OpenClaw Status Checkpoint
+
+Purpose: preserve deployment evidence without committing raw status output, VPS host details, local dashboard URLs, websocket URLs, process IDs, session keys, Telegram chat identifiers, or private runtime paths.
+
+## Verified Summary
+
+- OpenClaw was running on a Linux VPS.
+- The local gateway was reachable and authenticated.
+- The gateway was bound to loopback rather than exposed publicly.
+- The gateway service was enabled and running.
+- The main agent was active.
+- Telegram was enabled, connected, and polling through the OpenClaw channel.
+- No plugin compatibility issues were reported in the sanitized checkpoint.
+
+## Model and Session Context
+
+- Active routing was verified through OpenClaw session/status output.
+- The current portfolio configuration documents DeepSeek as the primary route and Llama 3.1 8B Instant as fallback.
+- Session keys and chat-derived identifiers are intentionally omitted.
+
+## Redaction Notes
+
+The original terminal output included local runtime status details that are useful during operations but noisy and too specific for a public repository. This checkpoint keeps the operational facts while removing private host details, raw URLs, process IDs, session IDs, and chat identifiers.

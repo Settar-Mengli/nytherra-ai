@@ -1,0 +1,26 @@
+# OpenClaw Skills Checkpoint
+
+Purpose: preserve the verified OpenClaw skills state without committing raw terminal control characters or runtime-only details.
+
+## Verified Summary
+
+- OpenClaw skills were installed and inspected for the main agent.
+- A small set of skills was eligible and visible to the model.
+- No missing requirements were reported in the sanitized checkpoint.
+- No allowlist blocks were reported in the sanitized checkpoint.
+
+## Relevant Visible Skills
+
+- Browser automation
+- Composio connect
+- Health check
+- Node connect
+- Skill creator
+- Taskflow
+- Taskflow inbox triage
+- tmux
+- Weather
+
+## Portfolio Relevance
+
+This checkpoint supports the README claim that Nytherra can use OpenClaw skills and Composio-connected tools while keeping runtime credentials and local state out of the repository.

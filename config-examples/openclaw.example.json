@@ -15,8 +15,14 @@
         "api": "openai-completions",
         "models": [
           {
+            "id": "downtown-miami/openrouter/deepseek/deepseek-v3.2",
+            "name": "DeepSeek V3.2",
+            "reasoning": false,
+            "input": ["text"]
+          },
+          {
             "id": "downtown-miami/groq/llama-3.1-8b-instant",
-            "name": "Groq Llama 3.1 8B Instant",
+            "name": "Groq Llama 3.1 8B Instant Fallback",
             "reasoning": false,
             "input": ["text"]
           }

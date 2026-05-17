@@ -13,12 +13,20 @@ id_rsa
 id_ed25519
 *.p12
 *.pfx
+client_secret*.json
+service-account*.json
+token.json
+*.credentials.json
+*.oauth.json
 .openclaw/
 /openclaw*.json
 /agent.models.json
 nytherra-ai-checkpoints/
 checkpoints/
 sessions/
+.composio/
+.mcporter/
+.cache/
 
 # Local/system files
 .DS_Store

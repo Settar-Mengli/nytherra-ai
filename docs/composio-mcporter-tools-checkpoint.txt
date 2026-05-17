@@ -1,0 +1,23 @@
+# Composio MCP / mcporter Tools Checkpoint
+
+Purpose: preserve the verified tool bridge behavior without committing raw tool output, account IDs, redirect URLs, or connection identifiers.
+
+## Verified Capabilities
+
+- Composio connection management is available for authenticated third-party apps.
+- Tool discovery should run before execution so Nytherra uses exact tool slugs instead of invented names.
+- Tool execution supports multiple independent tools when the tasks have no ordering dependency.
+- Large tool responses can be synchronized to a remote workbench, but public docs should summarize the result rather than publish raw JSON.
+- Remote file or workbench operations should be used only when the response is too large to handle inline.
+
+## Safety Rules Captured
+
+- Do not execute a toolkit tool unless the account connection is active.
+- Do not expose OAuth redirect URLs, account IDs, tool call IDs, document URLs, event IDs, draft IDs, or message IDs in public evidence.
+- Prefer structured Composio tools over custom scripts when an appropriate tool exists.
+- For Gmail, Nytherra's public portfolio behavior is draft-only.
+- For Docs, Drive, and Calendar, summarize completion without exposing private resource links.
+
+## Portfolio Relevance
+
+This checkpoint supports the README claim that Nytherra uses Composio MCP / mcporter as the Google tool bridge for Gmail, Calendar, Docs, and Drive automation.

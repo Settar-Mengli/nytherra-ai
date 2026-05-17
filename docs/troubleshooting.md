@@ -64,13 +64,7 @@ The agent-specific model configuration file was missing.
 
 ### Resolution
 
-The agent model file was recreated at:
-
-```text
-~/.openclaw/agents/main/agent.models.json
-```
-
-and configured with reasoning disabled for the active model route.
+The agent-specific model file was recreated in the private OpenClaw runtime directory and configured with reasoning disabled for the active model route. The live path is intentionally omitted from this public checkpoint.
 
 ## Telegram Polling Test
 
@@ -91,6 +85,17 @@ Result: ONLINE
 
 Telegram access is protected through OpenClaw pairing and owner approval rather than open public DM access.
 
+## Current Model Routing
+
+Nytherra now uses DeepSeek V3.2 as the primary model route and Groq Llama 3.1 8B Instant as the fallback route.
+
+Sanitized route examples:
+
+```text
+litellm/downtown-miami/openrouter/deepseek/deepseek-v3.2
+litellm/downtown-miami/groq/llama-3.1-8b-instant
+```
+
 ## Current Model/Tool-Routing Limitation
 
 The lightweight Llama 3.1 8B route may occasionally need explicit identity/context prompts and may over-route or overuse internal message/session behavior on strict prompts. This is a model/tool-routing limitation, not a Telegram integration failure.
@@ -103,7 +108,12 @@ The final working deployment uses:
 - Local gateway bound to loopback
 - Token-based gateway authentication
 - 4Geeks LLM gateway
-- Groq Llama 3.1 8B Instant model route
+- DeepSeek V3.2 primary model route
+- Groq Llama 3.1 8B Instant fallback model route
 - Telegram Bot API private channel integration through OpenClaw polling
+- Composio MCP / mcporter Google tools integration
+- Gmail draft-only automation
+- Google Calendar event creation
+- Google Docs and Drive creation
 - Text-only input
 - Reasoning-specific parameters disabled for provider compatibility
